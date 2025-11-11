@@ -10,47 +10,28 @@ This is a small web-based Workday tracker MVP (React + Vite) created in the repo
 
 Data is saved to your browser's localStorage and persists between sessions.
 
-How to run locally
+## TODO
 
-# Worktracker
+- [ ] Implement input validation for task descriptions.
+- [ ] Add error handling to the PDF export functionality.
+- [ ] Allow multiple active days (or warn the user if a day isn't ended).
+- [ ] Sort work history by date (descending).
+- [ ] Improve PDF styling.
+- [ ] Consider alternative data storage (IndexedDB) for larger datasets.
 
-This repository now contains a scaffolded React + Vite single-page app implementing a Workday tracker MVP.
-
-Features
-
-- Start/End Day: select a date and start your workday — start time is recorded.
-- Add Tasks: log tasks with timestamps while a day is active.
-- End Workday: end a day and the app computes hours for that day.
-- Work History: view previous days with start/end times, tasks, and hours.
-- PDF Export: export a PDF summary (generated client-side with html2canvas + jsPDF).
-
-Data persistence
-
-All data is stored in the browser's localStorage (no server). The key used is `worktracker:workdays`.
-
-Quickstart
-
-1. Install dependencies:
+## How to run locally
 
 ```bash
 npm install
 ```
 
-2. Start the dev server:
-
 ```bash
 npm run dev
 ```
 
-3. Build for production:
-
-```bash
-npm run build
-```
-
 Open the local URL printed by the dev server (usually http://localhost:5173).
 
-Files added
+## Files added
 
 - `index.html` - Vite entry
 - `package.json` - scripts and dependencies
@@ -58,7 +39,7 @@ Files added
 - `src/App.jsx` - main app UI and logic
 - `src/styles.css` - basic styling
 
-Notes and next steps
+## Notes and next steps
 
 - The PDF export is client-side and may not replicate complex styling perfectly; adjust the offscreen report styles in `src/App.jsx` if you want a different layout.
 - If you want tests, CI, or server-side persistence (e.g., Express + SQLite or Firebase sync), tell me which and I'll add them.
